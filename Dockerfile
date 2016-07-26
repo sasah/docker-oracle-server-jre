@@ -16,6 +16,11 @@ RUN JAVA_UPDATE="102" && \
         http://download.oracle.com/otn-pub/java/jdk/8u${JAVA_UPDATE}-b${JAVA_BUILD}/server-jre-8u${JAVA_UPDATE}-linux-x64.tar.gz \
         http://download.oracle.com/otn-pub/java/jce/8/jce_policy-8.zip && \
 
+    echo "50bc7ff61ba064c471adc2ec08e44690f0dac4cd673a3666b6d7b24a48bd7169  server-jre-8u${JAVA_UPDATE}-linux-x64.tar.gz" > server-jre-8u${JAVA_UPDATE}-linux-x64 && \
+    sha256sum -c server-jre-8u${JAVA_UPDATE}-linux-x64 && \
+    echo "f3020a3922efd6626c2fff45695d527f34a8020e938a49292561f18ad1320b59  jce_policy-8.zip" > jce_policy-8 && \
+    sha256sum -c jce_policy-8 && \
+
     tar -xzf server-jre-8u${JAVA_UPDATE}-linux-x64.tar.gz && \
     unzip jce_policy-8.zip && \
     mkdir -p /usr/java && \
