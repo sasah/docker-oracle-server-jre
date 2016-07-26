@@ -1,5 +1,5 @@
 # docker-oracle-server-jre
-Oracle Server JRE 8 Linux with Java Cryptography Extension Unlimited Strength Jurisdiction Policy
+Oracle Server JRE 8 Linux with Java Cryptography Extension Unlimited Strength Jurisdiction Policy and Timezone Updater
 
 [![Docker Stars](https://img.shields.io/docker/stars/sasah/oracle-server-jre.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/sasah/oracle-server-jre/)
 
