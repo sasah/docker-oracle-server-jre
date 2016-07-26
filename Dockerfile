@@ -45,8 +45,8 @@ RUN JAVA_UPDATE="102" && \
             /usr/java/jre/Welcome.html \
             /usr/java/jre/THIRDPARTYLICENSEREADME.txt && \
 
-    find /usr/java/bin -type f -not -name 'java' -print0 | xargs -0 rm -v -- && \
-    find /usr/java/jre/bin -type f -not -name 'java' -print0 | xargs -0 rm -v -- && \
+    find -L /usr/java/bin -type f -not -name 'java' -print0 | xargs -0 rm -v -- && \
+    find -L /usr/java/jre/bin -type f -not -name 'java' -print0 | xargs -0 rm -v -- && \
 
     ln -sv /usr/java/bin/* /usr/bin/ && \
 
